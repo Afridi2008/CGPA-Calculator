@@ -70,7 +70,7 @@ function createSubjects(sem) {
 }
 
 // Calculate CGPA
-function calculateCPGPA() {
+function calculateCGPA() {
     const n = Number(document.getElementById("numSem").value);
     let totalCredits = 0;
     let totalPoints = 0;
@@ -78,30 +78,28 @@ function calculateCPGPA() {
     for (let s = 1; s <= n; s++) {
         const sub = Number(document.getElementById(`sub_${s}`).value);
 
+        if (!sub || sub <= 0) {
+            alert(`Add subjects for Semester ${s}`);
+            return;
+        }
+
         for (let i = 1; i <= sub; i++) {
-            const credit = Number(document.getElementById(`c_${s}_${i}`).value);
+            const creditInput = document.getElementById(`c_${s}_${i}`).value;
             const grade = document.getElementById(`g_${s}_${i}`).value;
 
-            // ✅ Exclude failed subjects
-            if (
-                credit > 0 &&
-                grade !== "U" &&
-                grade !== "RA" &&
-                grade !== "AB"
-            ) {
-                totalCredits += credit;
-                totalPoints += credit * gradePoints[grade];
+            if (creditInput === "" || Number(creditInput) <= 0) {
+                alert(`Enter valid credits for Semester ${s}, Subject ${i}`);
+                return;
             }
+
+            if (grade === "U" || grade === "RA" || grade === "AB") continue;
+
+            const credit = Number(creditInput);
+            totalCredits += credit;
+            totalPoints += credit * gradePoints[grade];
         }
     }
 
-    if (totalCredits === 0) {
-        document.getElementById("output").innerText =
-            "No valid subjects to calculate CGPA";
-        return;
-    }
-
-    const cgpa = (totalPoints / totalCredits).toFixed(2);
-    document.getElementById("output").innerText =
-        `Your CGPA is: ${cgpa}`;
+    const cgpa = Math.round((totalPoints / totalCredits) * 1000) / 1000;
+    document.getElementById("output").innerText = `Your CGPA is: ${cgpa}`;
 }
