@@ -3,13 +3,14 @@
 }
 
 .bg{
+    background: url(bg.png);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.2;
+    
 }
 body {
     font-family: Arial, sans-serif;
@@ -19,10 +20,10 @@ body {
 
 .header {
     
-    color:  #8b0101;
+    color:  #ffee00;
     padding: 30px;
     text-align: center;
-   text-shadow:  2px 2px 2px  #494949;
+   text-shadow:  2px 2px 10px  rgb(0, 0, 20);
     border-radius: 12px;
     margin-bottom: 20px;
     
@@ -40,12 +41,13 @@ body {
 
 .container {
     max-width: 800px;
-     background: linear-gradient(135deg, #8b0101, #b30000, #8b0101);
-    color: #ffffff;
+     background:  #ffffff;
+    color: blue;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
     padding: 20px;
     border-radius: 12px;
+    box-shadow: 0 0 10px black;
    
 }
 
@@ -63,7 +65,7 @@ input, select, button {
 }
 
 button {
-    background: #4e0101;
+    background: linear-gradient(135deg,#080147,blue,#080147);
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -71,8 +73,8 @@ button {
 }
 
 button:hover {
-    background: #ffffff;
-    color: #4e0101;
+    background: #00032b;
+    color: yellow;
 }
 
 .semester-box {
@@ -107,7 +109,7 @@ button:hover {
 
 .copyright {
  
-    color: #1b1b1b;
+    color: #ffffff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     justify-content: left;
     align-content: center;
