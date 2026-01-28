@@ -2,22 +2,30 @@
     box-sizing: border-box;
 }
 
-
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
 body {
     font-family: Arial, sans-serif;
-    background:#daebf7 ;
     margin: 0;
     padding: 10px;
 }
 
 .header {
-    background: linear-gradient(135deg, #01388b, #0056b3);
-    color: #ffffff;
+    
+    color:  #8b0101;
     padding: 30px;
     text-align: center;
+   text-shadow:  2px 2px 2px  #494949;
     border-radius: 12px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -25,14 +33,14 @@ body {
 
 .header h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 80px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .container {
     max-width: 800px;
-    background: #01388b;
+     background: linear-gradient(135deg, #8b0101, #b30000, #8b0101);
     color: #ffffff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
@@ -55,7 +63,7 @@ input, select, button {
 }
 
 button {
-    background: #01204e;
+    background: #4e0101;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -63,7 +71,8 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #ffffff;
+    color: #4e0101;
 }
 
 .semester-box {
@@ -97,6 +106,7 @@ button:hover {
 
 
 .copyright {
+ 
     color: #1b1b1b;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     justify-content: left;
@@ -105,7 +115,7 @@ button:hover {
     line-height: 10px;
     text-align: center;
     margin: auto;
-    padding-left: 20px;
+
 
 }
 
