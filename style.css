@@ -3,7 +3,7 @@
 }
 
 .bg {
-    background: url(bg.png);
+    background:#120575;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,11 +33,12 @@ body {
     margin-right: auto;
 }
 
-.img {
+.header h1 {
      margin-left: auto;
     margin-right: auto;
   padding:20px;
     align-content: center;
+colour:yellow;
 
 
 }
