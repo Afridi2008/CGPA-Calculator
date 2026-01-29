@@ -2,57 +2,162 @@
     box-sizing: border-box;
 }
 
-.bg {
-    background:#120575;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
-}
 
 body {
+     background-image: linear-gradient( rgb(35, 5, 141), rgb(11, 3, 41));
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 10px;
-background-color:#120575;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
 }
 
 .header {
-
-    color: #ffee00;
+    background-color:rgb(7, 7, 25) ;
+    color: yellow;
     padding: 20px;
     text-align: center;
-    text-shadow: 2px 2px 10px rgb(0, 0, 20);
+    
+    box-shadow: inset 2px 2px 10px rgb(9, 1, 37),2px 2px 10px rgb(119, 83, 247);
     border-radius: 12px;
     margin-bottom: 20px;
-
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.header h1 {
-     margin-left: auto;
-    margin-right: auto;
-  padding:20px;
+.txt {
+    margin: 0;
     align-content: center;
-colour:yellow;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.temp {
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.grade-dropdown summary {
+    display: flex;
+    flex-direction: column;
+    /* keep summary on top, table below */
+    align-items: center;
+    /* horizontal centering */
+    justify-content: center;
+    /* vertical centering if needed in container */
+    margin: 20px auto;
+    /* auto horizontal margin */
+    width: fit-content;
+    /* shrink to content width */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(23, 22, 56);
+    margin-bottom: 12px;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
 
 
 }
 
-.container {
-    max-width: 800px;
+.grade-dropdown summary::-webkit-details-marker {
+    display: none;
+    margin: 10px auto;
+    /* auto left & right margins center the table */
+    border-collapse: collapse;
+    padding: 10px 20px;
+    text-align: center;
+    /* center text in cells */
+}
+
+/* Table container */
+.grade-table {
+    border-collapse: collapse;
     background: #ffffff;
-    color: blue;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 12px;
+    text-align: center;
+    margin: 0 auto 10px;
+    /* center the table horizontally */
+    width: 100%;
+    max-width: 400px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.grade-dropdown {
+    display: block;
+    width: fit-content;
+    /* shrink to content and center on page */
+    margin: 0 auto;
+    /* center the details element horizontally */
+    text-align: center;
+    /* center the summary text and table */
+}
+
+/* Cells */
+.grade-table th,
+.grade-table td {
+    padding: 10px 12px;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+
+/* Header */
+.grade-table th {
+    background: #e9e9ff;
+    font-weight: 600;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-content: center;
+}
+
+/* Last row border fix */
+.grade-table tr:last-child td {
+    border-bottom: none;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-content: center;
+}
+
+
+.container {
+    max-width: 600px;
+    background: rgb(204, 202, 247);
+    color: rgb(0, 0, 0);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 0 10px black;
+    box-shadow: inset 0 0 1px rgb(20, 18, 63), 0 0 10px rgb(20, 18, 63);
 
 }
 
@@ -65,18 +170,21 @@ input,
 select,
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 8px;
-    font-size: 15px;
-    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    background-color: rgb(228, 227, 253);
     color: black;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
 }
 
 button {
-    background: linear-gradient(135deg, #080147, blue, #080147);
+    background: linear-gradient(135deg, rgb(18, 16, 56), rgb(39, 35, 107), rgb(18, 16, 56));
     color: #ffffff;
     border: none;
-    border-radius: 6px;
+    border-radius: 100px;
     cursor: pointer;
 }
 
@@ -115,35 +223,253 @@ button:hover {
 }
 
 
-.copyright {
-
+#last {
+    border-radius: 20px;
+   
     color: #ffffff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    justify-content: left;
-    align-content: center;
-    display: block;
-    line-height: 10px;
+    padding: 20px;
     text-align: center;
-    margin: auto;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
 
+.foot {
+    color: #ffffff;
+    text-align: center;
+    margin: 15px 0;
+}
 
+.foot h6 {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.copyright {
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+
+.copyright a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.copyright a:hover {
+    transform: scale(1.2);
+}
+
+.copyright a img {
+    width: 20px;
+    height: 20px;
 }
 
 
 /* Mobile Responsive */
-@media (max-width: 600px) {
-    .subject-row {
-        flex-direction: column;
+@media (max-width: 768px) {
+    body {
+        padding: 8px;
     }
 
-    h2 {
-        font-size: 20px;
+    .header {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .img img {
+        width: 200px;
+        height: auto;
+    }
+
+    .txt {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .grade-table {
+        max-width: 90%;
+    }
+
+    .grade-table th,
+    .grade-table td {
+        padding: 8px 10px;
+        font-size: 12px;
     }
 
     input,
     select,
     button {
         font-size: 14px;
-        padding: 9px;
+        padding: 10px;
     }
+
+    .semester-box {
+        padding: 12px;
+        margin-top: 15px;
+    }
+
+    .semester-box h3 {
+        font-size: 18px;
+    label {
+        font-size: 14px;
+    }
+
+    .result {
+        font-size: 18px;
+    }
+
+    .foot h6 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+        #last {
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .copyright {
+            gap: 12px;
+            padding: 12px 0;
+        }
+
+        .copyright a img {
+            width: 18px;
+            height: 18px;
+        }
 }
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .header {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .img img {
+        width: 150px;
+        height: auto;
+    }
+
+    .txt {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 12px;
+        margin: 0;
+    }
+
+    .grade-dropdown {
+        width: 90%;
+    }
+
+    .grade-table {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .grade-table th,
+    .grade-table td {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 13px;
+        padding: 10px;
+        margin-top: 6px;
+    }
+
+    .subject-row {
+        gap: 8px;
+    }
+
+    .semester-box {
+        padding: 10px;
+        margin-top: 12px;
+    }
+
+    .semester-box h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    .result {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .foot {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .foot h6 {
+        font-size: 11px;
+        margin: 8px 0;
+    }
+
+    .copyright {
+        line-height: 25px;
+    }
+
+    .copyright a img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+        #last {
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 0;
+        }
+
+        .foot h6 {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .copyright {
+            gap: 10px;
+            padding: 10px 5px;
+        }
+
+        .copyright a img {
+            width: 16px !important;
+            height: 16px !important;
+        }
+    }}
