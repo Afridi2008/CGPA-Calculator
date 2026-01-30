@@ -12,6 +12,9 @@ body {
     overflow-x: hidden;
 }
 
+.img h3{
+    color: white;
+}
 
 .img {
     display: block;
